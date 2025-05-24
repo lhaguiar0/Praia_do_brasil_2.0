@@ -1,0 +1,184 @@
+/*A estrutura do css é composta: pela identificação do elemento seguido de chaves, e por fim dentro das chaves você escolhe o atributo que deseja modificar seguido do parãmetro. Ex :
+
+p{font-size: 16px; color: red;} 
+
+Sempre eu preciso terminar os comandos com ;
+*/
+/*Medidas Absolutas - ou seja fixas
+    px - pixels
+    cm - centímetros
+    mm - milímetros
+ Medidas relativas - ou seja que se ajustam
+    rem -  se ajusta de acordo com o tamanho da fonte html
+    %  - relativo ao tamanho do elemento pai / tela
+
+*/
+/*Estilo para todas as imagens*/
+.ferias{
+    
+    width: 100% ;/*Ocupa 100% da largura do elemento em que ela está*/
+    max-width: 600px;/*Limite de largura*/
+    height: auto;/*Manter a proporção*/
+    border-radius: 12px; /*Bordas arredondadas*/
+    margin:10px 0px ;/*Espaçamento acima e abaixo entre a img e o conteúdo*/
+    margin-left: 30%;
+    margin-right: 50%;
+    border: white 5px dotted;
+}
+tr,td{
+    /*Definindo tipo e espessura da borda*/
+    border: 1px solid;/*solid, dashed, dotted*/
+    /*definido a cor da borda das linhas e colunas da tabela*/
+    border-color: black;
+    
+}
+td{
+     /*Ajustando largura*/
+     width: 250px;
+}
+.linha1{
+    background-color: orange; /*Troca a cor de fundo*/
+    text-align: center;/*Alinha no centro*/
+    color: white;/*Troca a cor da linha*/
+}
+/**Aplicou estilos básicos**/
+body{
+    background-image:linear-gradient(to bottom,#2E3CE1,#4850A1,#E09800);/*Criamos um gradiente para a página web. Formas de aplicação right, left, top*/
+  font-family: Georgia, 'Times New Roman', Times, serif;/**Define a fonte padrão**/
+  color: gold;/**Define a cor do texto**/
+  line-height: 1.6;/**Define o espaçamento entre as linhas**/
+  padding: 20px;/**Espaçamenento interno nas bordas**/
+}
+/**Estilos do título principal da página**/
+h1{
+    text-align: center;/**Centraliza o texto**/
+    color: black;/**Aplica cor preta**/
+    font-size: 3rem;/**Altera o tamanho**/
+    margin-bottom: 30px;/*Espaço abaixo do título*/
+}
+/*Estilos para os subtítulos h3 e h4*/
+h4,h3,h4{
+    color: white;/*Cor da letra/fonte*/
+    margin-top: 20px;/*Espaço superior entre as seções*/
+    text-align: center;
+}
+p{
+    font-size:15px ;
+}
+li{
+    font-size: 19px;
+}
+/*Estilizando links*/
+a{
+    color: orangered;/*cor da letra/fonte*/
+    text-decoration: none;/*Remove o traçado do link*/
+}
+/*Evento hover nos links*/
+a:hover{
+    text-decoration: underline;/*Add um traço abaixo do link quando o mouse estiver sobre ele*/
+}
+/*Estilizar todas as listas (ol, li)
+cor de fundo, espaço interno, bordas arrendondadas*/
+.linhas{
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 3px;
+    color: white
+    ;
+}
+/*Estilo da Tabela*/
+table{
+    width: 100%;/*Ocupa 100% da largura do elemento ao qual ela está inserida*/
+    border-collapse: collapse;/*Juntar as bordas da tabela*/
+    margin-top: 20px;/*Espaço acima da tabela*/
+}
+table td{
+    border: 1px solid #ddd;/*Borda de 1 pixel de largura, linha conínua e cor cinza*/
+    text-align: center;
+    padding: 5px;
+    background-color: goldenrod;
+/*Espaçamento interno, alinhar o texto no centro e atribuir uma cor de fundo*/}
+
+.card{
+    background-color: #ffffff;/**Cor de fundo**/
+    border-radius: 15px;/*Arredondando as bordas*/
+    margin: 20px auto;/*Espaçamento*/
+    overflow: hidden;/*Ocultar o que passar dos limites do card*/
+    display: inline-block;/*Coloca os cards lado a lado*/
+    vertical-align: top;/*Alinhas os cards pelo topo*/
+    height: 750px;/*Define a altra para os cards*/
+    width: 600px;
+    transition: transform 0.3s ease;/*Animação na interação com os cards*/
+    
+
+}
+.card:hover{
+    transform: scale(1.03);/*Aumento 3% o tamanho do card*/
+}
+/*Estilizar os títulos do card*/
+.card-title{
+    font-size: 1.5rem;/*Modificando nova cor*/
+    color: #4850A1;/*Atribuindo nova cor*/
+    margin-bottom: 10px;/*Espaço abaixo do título*/
+    margin-left: 10px;/*Espaço á esuqerda do título*/
+}
+/*Estilizar o páragrafo*/
+.card-text{
+    margin-left: 10px;
+    color: white;
+}
+/*Ajustando imagem*/
+.card-img-top{
+    width: 50%;
+    height: 40%;
+    
+    
+}
+.btn-primary{
+    background-color: blueviolet;/*cor de fundo*/
+    color: white;/*cor de letra*/
+    padding: 10px 16px;/*espaço interno na horinzontal e vertical*/
+    border-radius: 8px;/*arrendondar as bordas*/
+    text-align: center;/*centralizar o texto*/
+    margin-left: 10px;/*espaço externo entre as bordas do botão e o limite do card*/
+}
+.btn-primary:hover{
+    transform: scale(1.02);
+    background-color: #2E3CE1;/*mudando a cor do botão ao deixar o cursor em cima do elemento*/
+    color: black;
+    text-decoration: none;/*retirando traçado do link*/
+}
+/*Responsividade*/
+@media(max-width:768px){
+    .card{
+        width: 90%;
+        margin: 20px auto;
+    }
+
+}
+/* Layout horizontal colorido */
+.icon-menu {
+    display: flex; /* Usa o modelo flexbox para alinhar os itens horizontalmente */
+    justify-content: space-around; /* Distribui os itens com espaçamento igual entre eles */
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Fundo com degradê do azul claro para azul escuro */
+    padding: 15px; /* Espaçamento interno em volta dos itens do menu */
+}
+
+/* Estilo dos links */
+.icon-menu a {
+    color: white; /* Cor do texto dos links: branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 1.1em; /* Tamanho da fonte um pouco maior que o padrão (1em) */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: transform 0.3s ease; /* Suaviza a animação de transformação em 0.3 segundos */
+}
+
+/* Animação ao passar o mouse */
+.icon-menu a:hover {
+    transform: scale(1.1); /* Ao passar o mouse, aumenta o tamanho do link em 10% */
+}
+#calculadora{
+    text-align: center;
+    font-size: 20px;
+    background-color: black;
+}
